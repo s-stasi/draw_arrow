@@ -17,7 +17,7 @@ extension ArrowDrawing on Canvas {
   /// BASED OFF https://www.codeproject.com/Questions/125049/Draw-an-arrow-with-big-cap
   ///
   void drawArrow(Offset arrowStart, Offset arrowEnd,
-      {Paint painter, double width}) {
+      {required Paint painter, double? width}) {
     double arrowMultiplier = width ?? 3;
 
     //tip of the arrow
@@ -108,7 +108,7 @@ extension ArrowDrawing on Canvas {
     Path arrowPath = Path()..addPolygon(arrowPoints, true);
 
     //define paint
-    Paint paint = painter ?? Paint();
+    Paint paint = painter;
 
     //draw
     this.drawPath(arrowPath, paint);

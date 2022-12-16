@@ -90,14 +90,13 @@ class UIPainter extends CustomPainter {
 
       //draw
       canvas.drawArrow(
-          Offset(globals.squarePos.dx * w, globals.squarePos.dy * h), ghostPos);
+          Offset(globals.squarePos.dx * w, globals.squarePos.dy * h), ghostPos,
+          painter: painter);
     }
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    //throw UnimplementedError();
     return globals.repaint;
   }
 }
